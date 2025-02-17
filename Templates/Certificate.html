@@ -1,0 +1,137 @@
+{% include 'Header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Contact</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        /* Certifications Section */
+.certifications {
+    background-color:black;
+    /* margin-top: 20px; */
+    
+  box-shadow: 0px 2px 10px rgb(245, 41, 75);
+}
+
+.card {
+    background-color: #fff;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.6);
+    transition: transform 0.3s;
+
+    padding: 20px; /* Increased padding */
+    font-size: 1.2rem; /* Bigger text */
+    text-align: center;
+    width: 100%; /* Full width inside column */
+    height: 160px; /* Increased height */
+    padding: 45px; /* More padding */
+    font-size: 2.3rem; /* Bigger text */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between text and button */
+    
+  box-shadow: 0px 2px 10px rgb(245, 41, 75);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .btn {
+    padding: 10px 45px; /* Adjusted button size */
+    font-size: 1rem;
+    width: auto; /* Button will adjust its size */
+    align-self: center; /* Center align button */
+}
+
+.btn-primary {
+    background-color: rgb(245, 41, 75);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(211, 33, 63);
+}
+
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: rgb(245, 41, 75);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certifications .col-md-3 {
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Certifications Section -->
+    <div class="certifications  text-white text-center py-5">
+        <h2 class="fw-bold">Certifications</h2>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card p-3">
+                        <h5>Python Developer</h5>
+                        <a href="https://www.linkedin.com/posts/activity-7253360009592385536-qewc?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-primary">View Certificate</a>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card p-3">
+                        <h5>Django Developer</h5>
+                        <a href="https://www.linkedin.com/posts/activity-7253360009592385536-qewc?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-primary">View Certificate</a>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card p-3">
+                        <h5>D.C.A</h5>
+                        <a href="https://example.com/dca-cert" target="_blank" class="btn btn-primary">View Certificate</a>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card p-3">
+                        <h5>Git & GitHub</h5>
+                        <a href="https://example.com/git-github-cert" target="_blank" class="btn btn-primary">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- <footer class="footer bg-black text-white text-center py-3">
+        <p>© 2025 Rashmi Kushwah. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/Rashmi-kushwah" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rashmi-kushwah-211487295/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rashmiinfo6@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer> -->
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+{% include 'Footer.html' %}
