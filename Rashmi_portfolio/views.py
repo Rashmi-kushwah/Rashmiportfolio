@@ -57,7 +57,7 @@ def Home(request):
     Skills_data = Skills.objects.all()
     contact_data = Contact.objects.all()
 
-    return render(request, 'Home.html', {
+    return render(request, 'index.html', {
         'certificate_data': certificate_data,
         'Skills_data': Skills_data,
         'Education_data': Education_data,
