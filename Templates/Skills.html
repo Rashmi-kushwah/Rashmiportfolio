@@ -192,34 +192,44 @@
 section {
   margin-bottom: 3rem;
 }
+
+
+      /* Responsive Design */
+@media screen and (max-width: 768px) {
+  .education-skills {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .education,
+  .skills {
+    width: 100%;
+   
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skill-box {
+    width: 70px;
+    height: 80px;
+  }
+  .skill-box img {
+    width: 30px;
+    height: 40px;
+  }
+}
+
 </style>
           
       
-      <div class="education-skills">
-        <div class="educatio" >
-    <!--   <div class="education" >
-        
-        <h2 class="education-title">Education</h2>
-        <p class="education-text" >Fullstack Python develoepr Courese from Vision Infotech</p> -->
-
-        <div class="education">
-          <h2 class="education-title">Education</h2>
-          <p class="education-text">Fullstack Python develoepr Courese from Vision Infotech</p>
-      </div>
-        
-        <div class="education">
-            <h2 class="education-title">Education</h2>
-            <p class="education-text">B.C.A from Dr. B.R. Ambedkar University,Agra</p>
-        </div>
-        <div class="education">
-            <h2 class="education-title">Education</h2>
-            <p class="education-text">12th from Gyan Bharti Girls Inter College, Agra</p>
-        </div>
-       
-  </div>
-
+    
              <!-- Education & Skills Section -->
-             <!-- <div class="education-skills">
+              <div class="education-skills">
              
               <div class="educatio" >
   
@@ -231,7 +241,7 @@ section {
              
               {% endfor %}
       
-  </div> -->
+  </div> 
 
          
   <div class="skills">

@@ -1,5 +1,18 @@
 from django.db import models
 
+from django.db import models
+
+class PortfolioImage(models.Model):
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)  # Position field
+    description = models.TextField()  # Description field
+    image = models.ImageField(upload_to='portfolio_images/')  # Image field
+
+    def __str__(self):
+        return self.name
+
+
+
 # Create your models here.
 class Aboutus(models.Model):
     About_title = models.CharField(max_length=100)  # About का title

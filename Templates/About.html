@@ -138,6 +138,47 @@
   .resume-btn:hover {
     background: rgb(245, 41, 75);
   }
+  
+  @media screen and (max-width: 768px) {
+    .about {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center;
+      padding: 40px; /* Thoda padding kam ki */
+    }
+  
+    .about-left, .about-right {
+      width: 100%; /* Full width le liya */
+    }
+  
+    .about-left h2 {
+      font-size: 1.8rem; /* Mobile ke liye thoda chhota kiya */
+    }
+  
+    .about-left p {
+      font-size: 1rem;
+      max-width: 100%; /* Full width le sake */
+      margin: 10px auto; /* Center align */
+    }
+  
+    .contact-info p {
+      justify-content: center; /* Icons aur text center */
+    }
+  
+    .about-right {
+      margin-top: 20px; /* Thoda gap text aur image ke beech */
+    }
+  
+    .profile-circle {
+      width: 200px; /* Image thodi chhoti kar di mobile pe */
+      height: 200px;
+      margin-right: 0; /* Right margin hataya */
+    }
+  
+    .resume-btn {
+      justify-content: center; /* Resume button bhi center ho */
+    }
+  }
+  
         </style>
     </head>
     <body>

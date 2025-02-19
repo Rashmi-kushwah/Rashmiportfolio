@@ -28,15 +28,16 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('header/', views.Header, name='header'),
-    path('footer/', views.Footer, name='footer'),
-    path('certificate/', views.Certificatedt, name='certificate'),
-    path('projects/', views.Project, name='projects'),
-    path('skills/', views.Skilldt, name='skills'),
-    path('education/', views.Educationdt, name='education'),
-    path('contact/', views.contact_form, name='contact'),
-    path('about/', views.About, name='about'),
-    path('', views.Home, name='home'),
+    path('', views.Portfolio_Home, name='home'),
+    path('header/', views.Portfolio_Header, name='header'),
+    path('footer/', views.Portfolio_Footer, name='footer'),
+    path('certificate/', views.Portfolio_Certificatedt, name='certificate'),
+    path('projects/', views.Portfolio_Project, name='projects'),
+    path('skills/', views.Portfolio_Skilldt, name='skills'),
+    path('Educationdt/', views.Portfolio_Educationdt, name='education'),
+    path('contact/', views.Portfolio_contact_form, name='contact'),
+    path('about/', views.Portfolio_About, name='about'),
+
   
   
 ]

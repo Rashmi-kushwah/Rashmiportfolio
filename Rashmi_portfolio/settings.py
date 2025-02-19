@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&7jll*f(a-=hn^0*1r!p^c-h%h&%vsk3bbrgl2gkchwh*nafte
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'Education',
     'certifucates',
     'Contactform',
-    
+    # 'Skills',
+       
 
 ]
 
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'Rashmi_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\DJANGO PRACTICE FOLDER\Rashmi_portfolio\Templates'],
+        'DIRS': ['Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
