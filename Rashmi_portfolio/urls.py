@@ -29,14 +29,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Portfolio_Home, name='home'),
-    # path('header/', views.Portfolio_Header, name='header'),
-    # path('footer/', views.Portfolio_Footer, name='footer'),
-    # path('certificate/', views.Portfolio_Certificatedt, name='certificate'),
-    # path('projects/', views.Portfolio_Project, name='projects'),
-    # path('skills/', views.Portfolio_Skilldt, name='skills'),
-    # path('Educationdt/', views.Portfolio_Educationdt, name='education'),
-    # path('contact/', views.Portfolio_contact_form, name='contact'),
-    # path('about/', views.Portfolio_About, name='about'),
+
 
   
   
