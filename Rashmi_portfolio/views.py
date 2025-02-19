@@ -24,105 +24,77 @@ from django.contrib import messages
 
 
 
-def Portfolio_Header(request):
-    return render (request,'Header.html')
+# def Portfolio_Header(request):
+#     return render (request,'Header.html')
 
-def Portfolio_Footer(request):
-    return render (request,'Footer.html')
+# def Portfolio_Footer(request):
+#     return render (request,'Footer.html')
 
 
     
 
-def Portfolio_Certificatedt(request):
+# def Portfolio_Certificatedt(request):
 
-    certificate_data = Certificate.objects.all()
-    print("certificates",certificate_data)
+#     certificate_data = Certificate.objects.all()
+#     print("certificates",certificate_data)
  
-    return render(request, 'Certificate.html', {'certificate_data': certificate_data})
+#     return render(request, 'Certificate.html', {'certificate_data': certificate_data})
 
 def Portfolio_Home(request):
   
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
 
-        print(f"Received Data: Name={name}, Email={email}, Message={message}")  # Debugging
 
-        if name and email and message:
-            Contact.objects.create(name=name, email=email, message=message)
-            messages.success(request, "Your message has been sent successfully!")
-            return redirect('/')
-        else:
-            messages.error(request, "All fields are required!")
-    about_data = Aboutus.objects.all()
-    certificate_data = Certificate.objects.all()
-    Projects_data = Projects.objects.all()
-    Education_data = Education.objects.all()
-    Skills_data = Skills.objects.all()
-    contact_data = Contact.objects.all()
-    portfolio_images = PortfolioImage.objects.all()
-    print("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",portfolio_images)
+    return render(request, 'index.html')
 
-    return render(request, 'index.html', {
-        'certificate_data': certificate_data,
-        'Skills_data': Skills_data,
-        'Education_data': Education_data,
-        'Projects_data': Projects_data,
-        'about_data': about_data,
-        'portfolio_images': portfolio_images,
-        # 'contact_data': contact_data,
-    })
-
-def Portfolio_Skilldt(request):
-    Skills_data = Skills.objects.all()
-    print('Skills_dataaaaa',Skills_data) 
-    Education_data = Education.objects.all()
+# def Portfolio_Skilldt(request):
+#     Skills_data = Skills.objects.all()
+#     print('Skills_dataaaaa',Skills_data) 
+#     Education_data = Education.objects.all()
     
-    return render (request,'Skills.html',{'Skills_data': Skills_data,'Education_data': Education_data})
+#     return render (request,'Skills.html',{'Skills_data': Skills_data,'Education_data': Education_data})
 
-def Portfolio_Educationdt(request):
-    Education_data = Education.objects.all()
-    Skills_data = Skills.objects.all()
-    print('Skills_dataaaaa',Skills_data) 
-    Education_data = Education.objects.all()
+# def Portfolio_Educationdt(request):
+#     Education_data = Education.objects.all()
+#     Skills_data = Skills.objects.all()
+#     print('Skills_dataaaaa',Skills_data) 
+#     Education_data = Education.objects.all()
 
-    return render (request,'Skills.html',{'Education_data': Education_data,'Education_data': Education_data})
-
-
+#     return render (request,'Skills.html',{'Education_data': Education_data,'Education_data': Education_data})
 
 
-def Portfolio_About(request):
-    about_data = Aboutus.objects.all()
-    print('about_dataaaa',about_data) 
-    return render(request, 'About.html', {'about_data': about_data})
-
-def Portfolio_images(request):
-    portfolio_images = PortfolioImage.objects.all()
-    print("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",portfolio_images)
-    return render (request,'index.html',{'portfolio_images': portfolio_images})
-
-def Portfolio_Project(request):
-    Projects_data = Projects.objects.all()
-    print("ddfc",Projects_data)
-
-    return render(request, 'Projects.html', {'Projects_data': Projects_data})
 
 
-def Portfolio_contact_form(request):
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+# def Portfolio_About(request):
+#     about_data = Aboutus.objects.all()
+#     print('about_dataaaa',about_data) 
+#     return render(request, 'About.html', {'about_data': about_data})
 
-        print(f"Received Data: Name={name}, Email={email}, Message={message}")  # Debugging
+# def Portfolio_images(request):
+#     portfolio_images = PortfolioImage.objects.all()
+#     print("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",portfolio_images)
+#     return render (request,'index.html',{'portfolio_images': portfolio_images})
 
-        if name and email and message:
-            Contact.objects.create(name=name, email=email, message=message)
-            messages.success(request, "Your message has been sent successfully!")
-            return redirect('contact')  # Ensure 'contact' URL is correct
-        else:
-            messages.error(request, "All fields are required!")
+# def Portfolio_Project(request):
+#     Projects_data = Projects.objects.all()
+#     print("ddfc",Projects_data)
 
-    # GET request ke case me render karna h
-    return render(request, "contact.html")
+#     return render(request, 'Projects.html', {'Projects_data': Projects_data})
+
+
+# def Portfolio_contact_form(request):
+#     if request.method == "POST":
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         message = request.POST.get('message')
+
+#         print(f"Received Data: Name={name}, Email={email}, Message={message}")  # Debugging
+
+#         if name and email and message:
+#             Contact.objects.create(name=name, email=email, message=message)
+#             messages.success(request, "Your message has been sent successfully!")
+#             return redirect('contact')  # Ensure 'contact' URL is correct
+#         else:
+#             messages.error(request, "All fields are required!")
+
+#     # GET request ke case me render karna h
+#     return render(request, "contact.html")
