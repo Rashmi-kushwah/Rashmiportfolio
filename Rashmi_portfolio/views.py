@@ -48,7 +48,7 @@ def Portfolio_Home(request):
     Skills_data = Skills.objects.all()
     contact_data = Contact.objects.all()
     portfolio_images = PortfolioImage.objects.all()
-    print("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",portfolio_images)
+
 
     return render(request, 'index.html', {
         'certificate_data': certificate_data,
@@ -62,23 +62,6 @@ def Portfolio_Home(request):
 
 
 
-# def Portfolio_contact_form(request):
-#     if request.method == "POST":
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         message = request.POST.get('message')
-
-#         print(f"Received Data: Name={name}, Email={email}, Message={message}")  # Debugging
-
-#         if name and email and message:
-#             Contact.objects.create(name=name, email=email, message=message)
-#             messages.success(request, "Your message has been sent successfully!")
-#             return redirect('/')  # Ensure 'contact' URL is correct
-#         else:
-#             messages.error(request, "All fields are required!")
-
-#     # GET request ke case me render karna h
-#     return render(request, "index.html")
 def Portfolio_contact_form(request):
     if request.method == "POST":
         name = request.POST.get('name')
